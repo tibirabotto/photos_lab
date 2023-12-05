@@ -38,9 +38,12 @@ const App = () => {
   return (
     <div className="App">
       <HomeRoute
+        state={state}
         topics={state.topicData}
         photos={state.photoData}
         photosByTopic={photosByTopic}
+        updateToFavPhotoIds={updateToFavPhotoIds}
+        removeFromFavPhotoIds={removeFromFavPhotoIds}
       />
     </div>
   );
