@@ -29,9 +29,19 @@ const App = () => {
       .then((data) => setTopicData(data));
   }, []);
 
+  const photosByTopic = (topic_id) => {
+    fetch(`${URL_API}/api/topics/photos/${topic_id}`)
+      .then((response) => response.json())
+      .then((data) => setPhotoData(data));
+  };
+
   return (
     <div className="App">
-      <HomeRoute topics={state.topicData} photos={state.photoData} />
+      <HomeRoute
+        topics={state.topicData}
+        photos={state.photoData}
+        photosByTopic={photosByTopic}
+      />
     </div>
   );
 };
