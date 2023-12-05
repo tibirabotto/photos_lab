@@ -5,8 +5,15 @@ import PhotoFavButton from "./PhotoFavButton";
 
 const PhotoListItem = (props) => {
   const { urls, user, location, id } = props.photo;
-  const { updateToFavPhotoIds, state, removeFromFavPhotoIds } = props;
-  const handleOnClick = () => {};
+  const {
+    updateToFavPhotoIds,
+    state,
+    removeFromFavPhotoIds,
+    onOpenPhotoDetailsModal,
+  } = props;
+  const handleOnClick = () => {
+    onOpenPhotoDetailsModal();
+  };
 
   return (
     <div className="photo-list__item">

@@ -4,6 +4,7 @@ import "./App.scss";
 
 import HomeRoute from "routes/HomeRoute";
 import useApplicationData from "hooks/useApplicationData";
+import PhotoDetailsModal from "routes/PhotoDetailsModal";
 
 // Note: Rendering a single component to build components in isolation
 const App = () => {
@@ -44,7 +45,13 @@ const App = () => {
         photosByTopic={photosByTopic}
         updateToFavPhotoIds={updateToFavPhotoIds}
         removeFromFavPhotoIds={removeFromFavPhotoIds}
+        onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
       />
+      {state.isPhotoDetailsModalOpen && (
+        <PhotoDetailsModal
+          onClosePhotoDetailsModal={onClosePhotoDetailsModal}
+        />
+      )}
     </div>
   );
 };

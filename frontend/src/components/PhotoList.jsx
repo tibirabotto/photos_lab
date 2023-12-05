@@ -4,7 +4,13 @@ import "../styles/PhotoList.scss";
 import PhotoListItem from "./PhotoListItem";
 
 const PhotoList = (props) => {
-  const { photos, updateToFavPhotoIds, removeFromFavPhotoIds, state } = props;
+  const {
+    photos,
+    updateToFavPhotoIds,
+    removeFromFavPhotoIds,
+    state,
+    onOpenPhotoDetailsModal,
+  } = props;
   const PhotoListRendered =
     photos &&
     photos.map((data) => (
@@ -14,6 +20,7 @@ const PhotoList = (props) => {
           state={state}
           updateToFavPhotoIds={updateToFavPhotoIds}
           removeFromFavPhotoIds={removeFromFavPhotoIds}
+          onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
         />
       </li>
     ));
