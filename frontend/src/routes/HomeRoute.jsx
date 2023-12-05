@@ -16,7 +16,11 @@ const HomeRoute = (props) => {
   } = props;
   return (
     <div className="home-route">
-      <TopNavigation topics={topics} photosByTopic={photosByTopic} />
+      <TopNavigation
+        topics={topics}
+        photosByTopic={photosByTopic}
+        state={state}
+      />
       <PhotoList
         photos={photos}
         state={state}
