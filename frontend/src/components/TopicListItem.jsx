@@ -11,7 +11,7 @@ const TopicListItem = (props) => {
 
   return (
     <div className="topic-list__item" onClick={handleClick}>
-      {title}
+      <span>{title}</span>
     </div>
   );
 };
