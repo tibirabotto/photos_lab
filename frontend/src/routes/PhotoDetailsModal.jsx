@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/PhotoDetailsModal.scss";
 import closeSymbol from "../assets/closeSymbol.svg";
 import PhotoList from "components/PhotoList";
+import PhotoFavButton from "components/PhotoFavButton";
 
 const PhotoDetailsModal = (props) => {
   const {
@@ -24,6 +25,12 @@ const PhotoDetailsModal = (props) => {
         <img src={closeSymbol} alt="close symbol" />
       </button>
       <div className="photo-details-modal__image">
+        <PhotoFavButton
+          updateToFavPhotoIds={updateToFavPhotoIds}
+          photoId={selectedPhoto.id}
+          state={state}
+          removeFromFavPhotoIds={removeFromFavPhotoIds}
+        />
         <img src={selectedPhoto.urls.full} width={760} height={500} />
       </div>
       <div className="photo-details-modal__photographer-details">
