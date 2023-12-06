@@ -14,7 +14,7 @@ const PhotoListItem = (props) => {
   } = props;
   const handleOnClick = () => {
     onOpenPhotoDetailsModal();
-    setPhotoSelected(props.photo);
+    setPhotoSelected(id);
   };
 
   return (

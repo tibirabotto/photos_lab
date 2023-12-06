@@ -35,6 +35,10 @@
   margin: 1em;
 }
 
+img {
+  object-fit: fit;
+}
+
 .photo-details-modal__top-bar {
   display: flex;
   flex-direction: row;

@@ -35,7 +35,7 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => setPhotoData(data));
   };
-
+  console.log(state.selectedPhoto);
   return (
     <div className="App">
       <HomeRoute

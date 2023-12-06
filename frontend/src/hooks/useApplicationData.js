@@ -31,7 +31,12 @@ function reducer(state, action) {
     case ACTIONS.SET_TOPIC_DATA:
       return { ...state, topicData: action.payload };
     case ACTIONS.SELECT_PHOTO:
-      return { ...state, selectedPhoto: action.payload };
+      return {
+        ...state,
+        selectedPhoto: state.photoData.find(
+          (entry) => entry.id === action.payload
+        ),
+      };
     case ACTIONS.DISPLAY_PHOTO_DETAILS:
       return { ...state, isPhotoDetailsModalOpen: action.payload };
     // Handle other actions...
@@ -65,8 +70,8 @@ const useApplicationData = () => {
     dispatch({ type: ACTIONS.FAV_PHOTO_REMOVED, payload: photoId });
   };
 
-  const setPhotoSelected = (selectedPhoto) => {
-    dispatch({ type: ACTIONS.SELECT_PHOTO, payload: selectedPhoto });
+  const setPhotoSelected = (photoId) => {
+    dispatch({ type: ACTIONS.SELECT_PHOTO, payload: photoId });
   };
 
   const onOpenPhotoDetailsModal = () => {

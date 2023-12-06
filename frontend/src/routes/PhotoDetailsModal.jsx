@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "../styles/PhotoDetailsModal.scss";
 import closeSymbol from "../assets/closeSymbol.svg";
@@ -48,14 +48,16 @@ const PhotoDetailsModal = (props) => {
       </div>
       <hr />
       <span>Related Photos</span>
-      <PhotoList
-        photos={Object.values(selectedPhoto.similar_photos)}
-        state={state}
-        updateToFavPhotoIds={updateToFavPhotoIds}
-        removeFromFavPhotoIds={removeFromFavPhotoIds}
-        onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
-        setPhotoSelected={setPhotoSelected}
-      />
+      {selectedPhoto.similar_photos && (
+        <PhotoList
+          photos={Object.values(selectedPhoto.similar_photos)}
+          state={state}
+          updateToFavPhotoIds={updateToFavPhotoIds}
+          removeFromFavPhotoIds={removeFromFavPhotoIds}
+          onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
+          setPhotoSelected={setPhotoSelected}
+        />
+      )}
     </div>
   );
 };
