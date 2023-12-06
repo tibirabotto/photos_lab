@@ -10,6 +10,7 @@ const PhotoList = (props) => {
     removeFromFavPhotoIds,
     state,
     onOpenPhotoDetailsModal,
+    setPhotoSelected,
   } = props;
   const PhotoListRendered =
     photos &&
@@ -21,6 +22,7 @@ const PhotoList = (props) => {
           updateToFavPhotoIds={updateToFavPhotoIds}
           removeFromFavPhotoIds={removeFromFavPhotoIds}
           onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
+          setPhotoSelected={setPhotoSelected}
         />
       </li>
     ));

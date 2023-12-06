@@ -1,6 +1,6 @@
 .photo-details-modal {
   background-color: white;
-  box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 55%;
   left: 50%;
@@ -31,7 +31,8 @@
 
 .photo-details-modal__image {
   max-width: 95%;
-  border-radius: 8px;
+
+  margin: 1em;
 }
 
 .photo-details-modal__top-bar {
@@ -46,6 +47,7 @@
 .photo-details-modal__photographer-details {
   display: flex;
   font-size: 16px;
+  margin: 1em;
 }
 
 .photo-details-modal__header {
@@ -74,4 +76,10 @@
   font-weight: 700;
   font-size: 12px;
   margin-left: 8px;
+}
+
+span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 1em;
 }

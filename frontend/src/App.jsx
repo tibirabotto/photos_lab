@@ -43,6 +43,7 @@ const App = () => {
         topics={state.topicData}
         photos={state.photoData}
         photosByTopic={photosByTopic}
+        setPhotoSelected={setPhotoSelected}
         updateToFavPhotoIds={updateToFavPhotoIds}
         removeFromFavPhotoIds={removeFromFavPhotoIds}
         onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
@@ -50,6 +51,12 @@ const App = () => {
       {state.isPhotoDetailsModalOpen && (
         <PhotoDetailsModal
           onClosePhotoDetailsModal={onClosePhotoDetailsModal}
+          selectedPhoto={state.selectedPhoto}
+          updateToFavPhotoIds={updateToFavPhotoIds}
+          removeFromFavPhotoIds={removeFromFavPhotoIds}
+          state={state}
+          setPhotoSelected={setPhotoSelected}
+          onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
         />
       )}
     </div>

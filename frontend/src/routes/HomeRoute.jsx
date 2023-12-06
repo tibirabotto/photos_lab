@@ -14,6 +14,7 @@ const HomeRoute = (props) => {
     updateToFavPhotoIds,
     removeFromFavPhotoIds,
     onOpenPhotoDetailsModal,
+    setPhotoSelected,
   } = props;
   return (
     <div className="home-route">
@@ -28,6 +29,7 @@ const HomeRoute = (props) => {
         updateToFavPhotoIds={updateToFavPhotoIds}
         removeFromFavPhotoIds={removeFromFavPhotoIds}
         onOpenPhotoDetailsModal={onOpenPhotoDetailsModal}
+        setPhotoSelected={setPhotoSelected}
       />
     </div>
   );

@@ -10,9 +10,11 @@ const PhotoListItem = (props) => {
     state,
     removeFromFavPhotoIds,
     onOpenPhotoDetailsModal,
+    setPhotoSelected,
   } = props;
   const handleOnClick = () => {
     onOpenPhotoDetailsModal();
+    setPhotoSelected(props.photo);
   };
 
   return (
